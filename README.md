@@ -3,7 +3,7 @@
 A project by Aussie Frost.
 
 ## Overview
-I am using spaCy natural language processing and various data manipulation methods to anonymize crisis case narratives given by [CAHOOTS](https://whitebirdclinic.org/cahoots/) (a crisis response organization in Eugene, OR.).
+I am using spaCy natural language processing and various data manipulation methods to anonymize crisis case narratives given by [CAHOOTS](https://whitebirdclinic.org/cahoots/) (a local crisis response organization in Eugene, OR.).
 
 ## File structure
 A quick overview on the files in this repository.
