@@ -1,0 +1,24 @@
+Professor: for people interested in de-identifying case narrative data, i just heard from the privacy officer at White Bird and he gave me this list of information that must be removed (in the reply)
+
+## "Limited Data Set" Identifiers that must be removed
+1. Names
+2. Elements of dates (except year) for dates that are directly related to an individual, including birth date, death date, and all ages over 89 and all elements of dates (including year) indicative of such age, except that such ages and elements may be aggregated into a single category of age 90 or older
+3. Telephone numbers
+4. Vehicle identifiers and serial numbers, including license plate numbers
+5. Fax numbers
+6. Device identifiers and serial numbers
+7. Email addresses
+8. Web Universal Resource Locators (URLs)
+9. Social security numbers
+10. Internet Protocol (IP) addresses
+11. Medical record numbers
+12. Biometric identifiers, including finger and voice prints
+13. Health plan beneficiary numbers
+14. Full-face photographs and any comparable images
+15. Account numbers
+16. Any other unique identifying number, characteristic, or code, except as permitted by paragraph (c) of this section; and
+17. Certificate/license numbers
+
+Professor: FYI, that's to create the the privacy status of a "Limited Data Set," which is the same status as the other CAHOOTS data that we're working with
+
+Johns Hopkins HIPAA Limited Data Set Definition: https://www.hopkinsmedicine.org/institutional-review-board/hipaa-research/limited-data-set

@@ -1,0 +1,14 @@
+# current project goals (updated 5/6/2024)
+
+## upcoming week
+[ X ] clean up my scripts
+[ X ] improve my anonymization script
+[ ] create python files
+[ X ] define clear path to data
+[ X ] coordinate project meetings with research team
+[ ] specify with Rori on if i should continue to build my own script
+
+## upcoming deadlines and events
+- 5/15/2024: should receive validation data from CAHOOTS
+- 5/30/2024: finalized script must be sent off to CAHOOTS
+- 5/30/2024: finalized report must be sent off to CAHOOTS
