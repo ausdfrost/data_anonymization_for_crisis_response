@@ -7,7 +7,8 @@ I am using spaCy natural language processing and various data manipulation metho
 
 ## File structure
 A quick overview on the data paths.
-1. [exploration](exploration)
-2. [deployable](deployable)
-3. [data](data)
-4. [output](output)
+1. Exploration on building the various scripts lives here: '[exploration](exploration)'
+2. Deployable scripts live here: '[deployable](deployable)'
+3. Example data and resources live here: '[data](data)'
+4. 1. Resources live here: '[data/resources](data/resources)'
+5. Example output lives here: '[output](output)'
