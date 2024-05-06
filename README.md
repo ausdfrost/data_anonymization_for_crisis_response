@@ -10,5 +10,5 @@ A quick overview on the data paths.
 1. Exploration on building the various scripts lives here: '[exploration](exploration)'
 2. Deployable scripts live here: '[deployable](deployable)'
 3. Example data and resources live here: '[data](data)'
-4. 1. Resources live here: '[data/resources](data/resources)'
-5. Example output lives here: '[output](output)'
+    1. Resources live here: '[data/resources](data/resources)'
+4. Example output lives here: '[output](output)'
