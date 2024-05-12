@@ -3,7 +3,7 @@
 The deployable Python script can be found at the path ’deployable/data_anonymization.py’. This script is
 compatible with the CAHOOTS dataset that was provided (see ’Testing Dataset 2’). I will be referencing this
 script for the analytical steps. Note that this script was derived and further modified from the Jupyter Notebook
-found at ’exploration/data_anonymizer.ipynb'. Should you wish to see process work, this notebook can be referenced, however do note that this script was only used for testing model feasibility and is not fully
+found at ['exploration/data_anonymizer.ipynb'](../exploration/data_anonymizer.ipynb). Should you wish to see process work, this notebook can be referenced, however do note that this script was only used for testing model feasibility and is not fully
 compatible with the final CAHOOTS-provided dataset.
 
 ## Dependencies
@@ -13,8 +13,10 @@ These are the dependencies I used to deploy the analytical script:
 2. NumPy
 3. Pandas for data management and manipulation
 4. SpaCy for natural language processing (NLP)
-  (a) ’en_core_web_sm’ pretrained model (set as default)
-  (b) ’en_core_web_trf’ pretrained model (optional, but can yield better performance at cost of speed)
+
+    (a) ’en_core_web_sm’ pretrained model (set as default)
+   
+    (b) ’en_core_web_trf’ pretrained model (optional, but can yield better performance at cost of speed)
 
 ## Data paths and resource imports
 **Define data paths** This section of the script allows for the user to specify the path that the data yet-to-be
