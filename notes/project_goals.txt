@@ -7,6 +7,7 @@
 [ X ] define clear path to data
 [ X ] coordinate project meetings with research team
 [ ] specify with Rori on if i should continue to build my own script
+[ ] fix state predefined replace (does not work)
 
 ## upcoming deadlines and events
 - 5/15/2024: should receive validation data from CAHOOTS

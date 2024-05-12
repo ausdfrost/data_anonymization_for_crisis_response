@@ -5,7 +5,7 @@ a simple script to scrape resource site and get nice data.
 import requests
 from bs4 import BeautifulSoup
 
-# provide url of site to scrape
+# provide url of last name site to scrape
 url = 'https://names.mongabay.com/most_common_surnames.htm'
 # get soup
 response = requests.get(url)
