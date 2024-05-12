@@ -1,4 +1,4 @@
-# CAHOOTS Crisis Response Data Protection and De-Identification
+# CAHOOTS Crisis Response Data Anonymization
 
 A project by Aussie Frost.
 
