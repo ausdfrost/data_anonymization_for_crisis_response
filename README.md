@@ -18,5 +18,5 @@ A quick overview on the files in this repository.
     1. Resources live here: ['data/resources'](data/resources)
 4. Example output lives here: ['output'](output)
 
-## Deploying the script
-The deployable version of this script can be found [here](deployable/data_anonymizer.py).
+## How to run the script
+The deployable version of this script can be found [here](deployable/data_anonymizer.py). The [README](deployable/README.md) contains an overview on the functionality of the script, as well as some key dependencies that must be installed in order for the script to work.
