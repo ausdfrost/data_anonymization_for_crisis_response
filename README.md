@@ -1,4 +1,4 @@
-# Personally Identifiable Information (PII) Data Anonymization for the CAHOOTS Crisis Response Organization
+# CAHOOTS Crisis Response Data Protection and De-Identification
 
 A project by Aussie Frost.
 
