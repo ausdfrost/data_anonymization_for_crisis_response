@@ -17,3 +17,6 @@ A quick overview on the files in this repository.
 3. Example data and resources live here: ['data'](data)
     1. Resources live here: ['data/resources'](data/resources)
 4. Example output lives here: ['output'](output)
+
+## Deploying the script
+The deployable version of this script can be found [here](deployable/data_anonymizer.py).
