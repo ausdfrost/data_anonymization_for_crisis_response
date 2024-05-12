@@ -2,9 +2,8 @@
 ## Overview
 The deployable Python script can be found at the path ’deployable/data_anonymization.py’. This script is
 compatible with the CAHOOTS dataset that was provided (see ’Testing Dataset 2’). I will be referencing this
-script for the analytical steps. Note that this script was derived and further modified from the JupyterNotebook
-found at [’exploration/data_anonymizer.ipynb’](’~/exploration/data_anonymizer.ipynb’). Should you wish to see process work, this notebook can
-be referenced, however do note that this script was only used for testing model feasibility and is not fully
+script for the analytical steps. Note that this script was derived and further modified from the Jupyter Notebook
+found at ’exploration/data_anonymizer.ipynb'. Should you wish to see process work, this notebook can be referenced, however do note that this script was only used for testing model feasibility and is not fully
 compatible with the final CAHOOTS-provided dataset.
 
 ## Dependencies
