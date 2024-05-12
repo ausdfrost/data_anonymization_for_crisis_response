@@ -8,7 +8,7 @@ I am using spaCy natural language processing and various data manipulation metho
 ## Purpose
 The research question I am focused on is defined as follows: "can a script reliably remove identifying information (names, phone numbers, addresses) from case narratives?".
 
-This original question has been modified to capture more identifying information such that the output results in what is considered a Limited Data Set. The identifiers that must be removed are specified in a text file found [here](’notes/identifiers_to_remove.txt).
+This original question has been modified to capture more identifying information such that the output results in what is considered a Limited Data Set. The identifiers that must be removed are specified in a text file found [here](notes/identifiers_to_remove.txt).
 
 ## File structure
 A quick overview on the files in this repository.
