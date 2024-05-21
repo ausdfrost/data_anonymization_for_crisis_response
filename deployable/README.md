@@ -9,14 +9,14 @@ compatible with the final CAHOOTS-provided dataset.
 ## Dependencies
 These are the dependencies I used to deploy the analytical script:
 
-1. Python 3.11.6
-2. NumPy
-3. Pandas for data management and manipulation
-4. SpaCy for natural language processing (NLP)
+1. `Python 3.11.6`
+2. `NumPy`
+3. `Pandas` for data management and manipulation
+4. `SpaCy` for natural language processing (NLP)
 
-    (a) ’en_core_web_sm’ pretrained model (set as default)
+    (a) `’en_core_web_sm’` pretrained model (set as default)
    
-    (b) ’en_core_web_trf’ pretrained model (optional, but can yield better performance at cost of speed)
+    (b) `’en_core_web_trf’` pretrained model (optional, but can yield better performance at cost of speed)
 
 ## Data paths and resource imports
 **Define data paths** This section of the script allows for the user to specify the path that the data yet-to-be
