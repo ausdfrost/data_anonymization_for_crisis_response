@@ -26,4 +26,4 @@ A quick overview on the files in this repository.
 The deployable version of this script can be found [here](deployable/data_anonymizer.py). The [README](deployable/README.md) contains an overview on the functionality of the script, as well as some key dependencies that must be installed in order for the script to work.
 
 ---
-Last updated on 12 May 2024.
+Last updated on 21 May 2024.
