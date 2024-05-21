@@ -21,7 +21,7 @@ nlp = spacy.load("en_core_web_sm") # en_core_web_sm or en_core_web_trf
 # note must install: python -m spacy download en_core_web_trf
 
 # ### Define data paths
-in_datapath = "../cahoots_data/2023_CAHOOTS_Call_Data_Scrubbed.csv" # input
+in_datapath = "../cahoots_data/2023_CAHOOTS_Call_Data_With_Identifiers.csv" # input
 out_datapath = "../output/2023_CAHOOTS_Call_Data_Anonymized.csv" # output
 
 # Import anonymization resources
@@ -55,13 +55,13 @@ states_list = import_resources('../data/resources/states_list/states_list.txt')
 
 # define regex patterns
 phone_pattern = r"\(?\b(\d{3})\)?[-.\s]*(\d{3})[-.\s]*(\d{4})\b"
-address_pattern = r"\b\d+\s(?:[A-Za-z]+\s)*(?:St|Street|Rd|Road|Ave|Avenue|Blvd|Boulevard|Pl|Place|Lane|Ln|Drive|Dr|Court|Ct|Terrace|Ter|Way)[,.\s]"
+address_pattern = r"\b\d+\s(?:[A-Za-z0-9]+\s)*(?:St|Street|Rd|Road|Ave|Avenue|Blvd|Boulevard|Pl|Place|Lane|Ln|Drive|Dr|Court|Ct|Terrace|Ter|Way)\b(?:[,.\s]|$)"
 web_pattern = r'(https?:\/\/)?(?:www\.)?[a-zA-Z0-9\.-]+\.[a-zA-Z]{2,}(?:\/\S*)?'
 ip_pattern = r"\b((?:\d{1,3}\.){3}\d{1,3}|([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|:([0-9a-fA-F]{1,4}:){1,7}|::(?:[0-9a-fA-F]{1,4}:){0,5}[0-9a-fA-F]{1,4})\b"
 zip_pattern = r"\b\d{5,}\b"
 date_pattern = r"\b(?:\d{1,2}(st|nd|rd|th)?\s?(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)|\d{1,2}/\d{1,2}/?\d{2,4}|\d{4}-\d{2}-\d{2})\b"
 month_pattern = "\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\b"
-num_pattern = r"\b\w*[\d]+\w*\b"
+#num_pattern = r"\b\w*[\d]+\w*\b"
 prefix_pattern = r"\b(Dr|Dr\.|Mr|Mr\.|Mrs|Mrs\.|Ms|Ms\.|Miss|Miss\.|Sir|Madam)\b"
 
 def regex_remover(text):
@@ -81,15 +81,15 @@ def regex_remover(text):
         return text
     
     # apply RegEx pattern for each target feature
-    text = re.sub(address_pattern, "[ADDRESS]", text, flags=re.IGNORECASE)
-    text = re.sub(zip_pattern, "[ZIP]", text, flags=re.IGNORECASE)
-    text = re.sub(date_pattern, "[DATE]", text, flags=re.IGNORECASE)
-    text = re.sub(month_pattern, "[DATE]", text, flags=re.IGNORECASE)
-    text = re.sub(web_pattern, "[WEBSITE]", text, flags=re.IGNORECASE)
-    text = re.sub(ip_pattern, "[IP]", text, flags=re.IGNORECASE)
-    text = re.sub(phone_pattern, "[PHONE]", text, flags=re.IGNORECASE)
-    text = re.sub(num_pattern, "[NUMBER]", text, flags=re.IGNORECASE)
-    text = re.sub(prefix_pattern, "[PREFIX]", text, flags=re.IGNORECASE)
+    text = re.sub(address_pattern, "(LOCATION)", text, flags=re.IGNORECASE)
+    text = re.sub(zip_pattern, "(ZIP)", text, flags=re.IGNORECASE)
+    text = re.sub(date_pattern, "(DATE)", text, flags=re.IGNORECASE)
+    text = re.sub(month_pattern, "(DATE)", text, flags=re.IGNORECASE)
+    text = re.sub(web_pattern, "(WEBSITE)", text, flags=re.IGNORECASE)
+    text = re.sub(ip_pattern, "(IP)", text, flags=re.IGNORECASE)
+    text = re.sub(phone_pattern, "(PHONE)", text, flags=re.IGNORECASE)
+    #text = re.sub(num_pattern, "(NUMBER)", text, flags=re.IGNORECASE)
+    text = re.sub(prefix_pattern, "(PREFIX)", text, flags=re.IGNORECASE)
     
     return text
 
@@ -116,22 +116,30 @@ def nlp_anonymize_text(text):
     # replace all recognized names with name of feature removed (all caps)
     for ent in doc.ents:
 
-        # first check for addresses
-        if ent.label_ in ["GPE", "LOC", "FAC"]:
-            text = text.replace(ent.text, "[ADDRESS]")
-        # then check for names
+        # check for addresses
+        #if ent.label_ in ["GPE", "LOC", "FAC"]:
+            #text = text.replace(ent.text, "(LOCATION)")
+        # check for names
         if ent.label_ == "PERSON":
-            text = text.replace(ent.text, "[NAME]")
-        # then check for dates
+            if ent.label_ != 'pt':
+                text = text.replace(ent.text, "(NAME)")
+        # check for dates
         if ent.label_ == "DATE":
-            text = text.replace(ent.text, "[DATE]")
+            text = text.replace(ent.text, "(DATE)")
+        # check for languages
+        if ent.label_ == "LANGUAGE":
+            text = text.replace(ent.text, "(LANGUAGE)")
+        """ optional features:
+        # check for organizations
+        if ent.label_ == "ORG":
+            text = text.replace(ent.text, "(ORGANIZATION)")
+        """
             
     return text
 
 # ### Method 3: Predefined Term Replacement
 # The first part of this method uses an aggregated set of first names registered at least five times in the SSA database from years 1880 through 2022. We call this method last as it is the most distructive to the original database.
 # Then, this method uses a set of states and their shorthand forms such that states can be caught and replaced.
-
 def term_remover(text, resource_list, replacement_text):
     """ Replaces terms in the given text with replacement_text, 
     handling names case-insensitively.
@@ -159,10 +167,10 @@ def term_replacement(text):
         return text
     
     # call predefined term removal functions
-    text = term_remover(text, firstnames_list, "[SURNAME]")
-    text = term_remover(text, lastnames_list, "[LASTNAME]")
-    text = term_remover(text, lanestreets_list, "[ADDRESS]")
-    text = term_remover(text, states_list, "[ADDRESS]")
+    #text = term_remover(text, firstnames_list, "(SURNAME)")
+    text = term_remover(text, lastnames_list, " (LASTNAME)")
+    text = term_remover(text, lanestreets_list, " (LOCATION)")
+    text = term_remover(text, states_list, " (LOCATION)")
     
     return text
 
@@ -179,13 +187,13 @@ def data_anonymizer(text):
     Returns:
     text (str): a modified version of a string
     """
-        
-    # METHOD 1-- RegEx replacement:
-    text = regex_remover(text)
-    
-    # METHOD 2-- natural language processing:
+
+    # METHOD 1-- natural language processing:
     # use NLP to anonomize target features
     text = nlp_anonymize_text(text)
+
+    # METHOD 2-- RegEx replacement:
+    text = regex_remover(text)
     
     # METHOD 3-- predefined term replacement:
     text = term_replacement(text)
@@ -202,12 +210,22 @@ def anonymize_columns(data):
     Returns:
     data (Pandas DataFrame): an anonymized DataFrame
     """
+
     # select columns that include text
     text_columns = data.select_dtypes(include=['object']).columns
+
+    # define columns to ignore
+    ignore_columns = ["Homeless", "Gender", "Call Sign"]
     for col in text_columns:
-        # display column that is being anonymized
-        print(f"Anonymizing column: {col}")
-        data[col] = data[col].apply(data_anonymizer)
+        
+        # ignore specified columns
+        if col not in ignore_columns:
+
+            # display column that is being anonymized
+            print(f"Anonymizing column: {col}")
+
+            # apply data_anonymizer to column and update column contents
+            data[col] = data[col].apply(data_anonymizer)
     return data
 
 def anonymize_narratives(in_datapath, out_datapath, separator=','):
