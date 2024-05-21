@@ -5,10 +5,13 @@ A project by Aussie Frost.
 ## Overview
 I am using spaCy natural language processing and various data manipulation methods to anonymize crisis case narratives given by [CAHOOTS](https://whitebirdclinic.org/cahoots/), a local crisis response organization in Eugene, Oregon.
 
-## Purpose
+## Goal
 The research question I am focused on is defined as follows: "can a script reliably remove identifying information (names, phone numbers, addresses) from case narratives?".
 
 This original question has been modified to capture more identifying information such that the output results in what is considered a Limited Data Set. The identifiers that must be removed are specified in a text file found [here](notes/identifiers_to_remove.txt).
+
+## Purpose
+Many organizations collect data on the work they are doing. This data often contains sensitive information that could be used to identify a person. In this project, I set out to find the best way to remove this sensitive information. This allows the data to be passed on to data analysts in the future, such that meaningful questions can be asked and organization insights can be found.
 
 ## File structure
 A quick overview on the files in this repository.
