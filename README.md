@@ -22,7 +22,7 @@ This package can be installed just like any other Python package via pip. If you
 Setup takes just a few steps:
 
 1. Install anonymizePy: `pip install anonymizePy`
-2. Install neccecary model: `pip install https://huggingface.co/beki/en_spacy_pii_distilbert/resolve/main/en_spacy_pii_distilbert-any-py3-none-any.whl`
+2. Install necessary model: `pip install https://huggingface.co/beki/en_spacy_pii_distilbert/resolve/main/en_spacy_pii_distilbert-any-py3-none-any.whl`
 
 ## Running the script
 The script I used to deploy the methods from anonymizePy can be found here: '[data_anonymization](data_anonymization.py)'. It's easy to adjust parameters to tailor the script to your liking. <ins>Note</ins> that you will need to redefine your paths with respect to your data.
