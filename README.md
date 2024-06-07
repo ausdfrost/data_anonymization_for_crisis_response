@@ -10,7 +10,7 @@ I am using spaCy natural language processing and various data manipulation metho
 ## Research question and project goal
 The research question I am focused on is defined as follows: "can a script reliably remove identifying information (names, phone numbers, addresses) from case narratives?". This original question has been expanded upon to capture more identifying information such that the output results in what is considered a Limited Data Set.
 
-## 🤔 Why is this important?
+## Why is this important?
 Organizations are constantly collecting data on the work that they are doing. This data often contains sensitive information that could be traced back to reveal a person's identify. The CAHOOTS organization holds the confidentiality of all of their patients very highly, thus they want to mitigate any risk of data with PII (personally identifiable information) from getting into the wrong hands. In this project, I set out to build a robust tool to remove this sensitive information. This allows the data to be passed on to data analysts in the future, such that meaningful questions can be asked and organization insights can be found.
 
 ## How does the anonymizer work?
@@ -23,4 +23,4 @@ Setup takes just a few steps:
 2. Install neccecary model: `pip install https://huggingface.co/beki/en_spacy_pii_distilbert/resolve/main/en_spacy_pii_distilbert-any-py3-none-any.whl`
 
 ## How to run the script:
-My optimal PII generation, data anonymization, and model evaluation can be found in this script: '[data_anonymization](data_anonymization.py)'. 
+The script I used to deploy the methods from anonymizePy can be found here: '[data_anonymization](data_anonymization.py)'.
