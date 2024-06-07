@@ -25,4 +25,4 @@ Setup takes just a few steps:
 2. Install neccecary model: `pip install https://huggingface.co/beki/en_spacy_pii_distilbert/resolve/main/en_spacy_pii_distilbert-any-py3-none-any.whl`
 
 ## How to run the script:
-The script I used to deploy the methods from anonymizePy can be found here: '[data_anonymization](data_anonymization.py)'.
+The script I used to deploy the methods from anonymizePy can be found here: '[data_anonymization](data_anonymization.py)'. It's easy to adjust parameters to tailor the script to your liking. <ins>Note</ins> that you will need to redefine your paths with respect to your data.
