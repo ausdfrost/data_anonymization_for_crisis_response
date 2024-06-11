@@ -35,4 +35,4 @@ Example data can be found here --> '[call data](call_data.csv)'. Example result 
 
 ## How has this project been shared?
 - A [presentation](presentation.pdf) outlining my work was presented in front of peers and University of Oregon faculty on June 7th, 2024.
-- A [report](project-report.pdf) outlining the case anonymization project was sent to Rori Rohlfs on June 10th, 2024.
+- A [report](project-report.pdf) outlining the case anonymization project was sent to Professor Rori Rohlfs on June 10th, 2024.
