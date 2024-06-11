@@ -34,5 +34,5 @@ Replicating my analysis involves running these two scripts:
 Example data can be found here --> '[call data](call_data.csv)'. Example result output can be found here --> '[anonymization metrics](anonymization_metrics.log)'.
 
 ## How has this project been shared?
-- This project was presented in front of peers and university faculty on June 7th, 2024. The presentation can be found here --> [presentation](presentation.pdf).
+- This project was presented in front of peers and University of Oregon faculty on June 7th, 2024. The presentation can be found here --> [presentation](presentation.pdf).
 - A report outlining the case anonymization project was sent to Rori Rohlfs on June 10th, 2024. The report can be found here --> [project report](project-report.pdf).
