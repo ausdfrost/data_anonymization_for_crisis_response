@@ -25,6 +25,5 @@ Setup takes just a few steps:
 2. Install necessary model: `pip install https://huggingface.co/beki/en_spacy_pii_distilbert/resolve/main/en_spacy_pii_distilbert-any-py3-none-any.whl`
 
 ## Running the scripts
-The script I used to preprocess the CAHOOTS can be found here: '[case narrative data cleaning](call_data_cleaning.py)'. This script must be run on CSV files that were downloaded from CAHOOTS via Microsoft SharePoint.
-
-The script I used to deploy the methods from anonymizePy can be found here: '[data_anonymization](data_anonymization.py)'. It's easy to adjust parameters to tailor the script to your liking. <ins>Note</ins> that you will need to redefine your paths with respect to your data.
+1. Preprocessing: The script I used to preprocess the CAHOOTS can be found here --> '[case narrative data cleaning](call_data_cleaning.py)'. This script must be run on CSV files that were downloaded from CAHOOTS via Microsoft SharePoint.
+2. Data anonymization pipeline: The script I used to deploy the methods from anonymizePy can be found here --> '[data_anonymization](data_anonymization.py)'. It's easy to adjust parameters to tailor the script to your liking. <ins>Note</ins> that you will need to redefine your paths with respect to your data.
