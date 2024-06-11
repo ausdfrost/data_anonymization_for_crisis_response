@@ -18,17 +18,21 @@ After a lot of work devising the best data anonymization pipeline, I came up wit
 
 This package can be installed just like any other Python package via pip. If you are curious to get a more detailed look into how the anonymizer works, you can view the complete set of methods [here](https://github.com/ausdfrost/anonymizePy/blob/main/anonymizePy/data_anonymization_toolkit.py).
 
-## Getting started
+### Getting started
 Setup takes just a few steps:
 
 1. Install anonymizePy: `pip install anonymizePy`
 2. Install necessary model: `pip install https://huggingface.co/beki/en_spacy_pii_distilbert/resolve/main/en_spacy_pii_distilbert-any-py3-none-any.whl`
 
-## Running the scripts
+### Running the scripts
 Replicating my analysis involves running these two scripts:
 
 1. Preprocessing: The script I used to preprocess the CAHOOTS can be found here --> '[case narrative data cleaning](call_data_cleaning.py)'. This script must be run on CSV files that were downloaded from CAHOOTS via Microsoft SharePoint.
 2. Data anonymization pipeline: The script I used to deploy the methods from anonymizePy can be found here --> '[data_anonymization](data_anonymization.py)'. It's easy to adjust parameters to tailor the script to your liking. <ins>Note</ins> that you will need to redefine your paths with respect to your data.
 
-## Example data and output
+### Example data and output
 Example data can be found here --> '[call data](call_data.csv)'. Example result output can be found here --> '[anonymization metrics](anonymization_metrics.log)'.
+
+## How was this project shared?
+- This project was presented in front of peers and university faculty on June 7th, 2024. The presentation can be found here --> [presentation](presentation.pdf).
+- A report outlining the case anonymization project was sent to Rori Rohlfs on June 10th, 2024. The report can be found here --> [project report](project-report.pdf).
