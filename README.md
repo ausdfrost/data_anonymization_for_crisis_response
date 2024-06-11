@@ -5,7 +5,7 @@ A project by Aussie Frost for the DSCI 410 Applied Data Science for Social Justi
 Started on 4/15/2024. Presented on 6/7/2024. Completed on 6/10/2024.
 
 ## Overview
-I am using spaCy natural language processing and various data manipulation methods to anonymize crisis case narratives given by [CAHOOTS](https://whitebirdclinic.org/cahoots/), a local crisis response organization in Eugene, Oregon.
+I am using Named Entity Recognition alongside RegEx data manipulation methods to anonymize crisis case narratives given by [CAHOOTS](https://whitebirdclinic.org/cahoots/), a local crisis response organization in Eugene, Oregon.
 
 ## What is the goal of this project?
 The research question I am focused on is defined as follows: "can a script reliably remove identifying information (names, phone numbers, addresses) from case narratives?". This original question has been expanded upon to capture more identifying information such that the output results in what is considered a Limited Data Set.
