@@ -31,4 +31,4 @@ Replicating my analysis involves running these two scripts:
 2. Data anonymization pipeline: The script I used to deploy the methods from anonymizePy can be found here --> '[data_anonymization](data_anonymization.py)'. It's easy to adjust parameters to tailor the script to your liking. <ins>Note</ins> that you will need to redefine your paths with respect to your data.
 
 # Example data and output
-Example data can be found here --> '[call data](call_data.csv)'. Example result output can be found here --> '[anonymization metrics](anonymization_metrics.log)'
+Example data can be found here --> '[call data](call_data.csv)'. Example result output can be found here --> '[anonymization metrics](anonymization_metrics.log)'.
