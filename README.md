@@ -7,7 +7,7 @@ Started on 4/15/2024. Presented on 6/7/2024. Completed on 6/10/2024.
 ## Overview
 I am using spaCy natural language processing and various data manipulation methods to anonymize crisis case narratives given by [CAHOOTS](https://whitebirdclinic.org/cahoots/), a local crisis response organization in Eugene, Oregon.
 
-## Research question and project goal
+## What is the goal of this project?
 The research question I am focused on is defined as follows: "can a script reliably remove identifying information (names, phone numbers, addresses) from case narratives?". This original question has been expanded upon to capture more identifying information such that the output results in what is considered a Limited Data Set.
 
 ## Why is this important?
@@ -33,6 +33,6 @@ Replicating my analysis involves running these two scripts:
 ### Example data and output
 Example data can be found here --> '[call data](call_data.csv)'. Example result output can be found here --> '[anonymization metrics](anonymization_metrics.log)'.
 
-## How was this project shared?
+## How has this project been shared?
 - This project was presented in front of peers and university faculty on June 7th, 2024. The presentation can be found here --> [presentation](presentation.pdf).
 - A report outlining the case anonymization project was sent to Rori Rohlfs on June 10th, 2024. The report can be found here --> [project report](project-report.pdf).
