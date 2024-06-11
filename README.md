@@ -14,7 +14,7 @@ The research question I am focused on is defined as follows: "can a script relia
 Organizations are constantly collecting data on the work that they are doing. This data often contains sensitive information that could be traced back to reveal a person's identify. The CAHOOTS organization holds the confidentiality of all of their patients very highly, thus they want to mitigate any risk of data with PII (personally identifiable information) from getting into the wrong hands. In this project, I set out to build a robust tool to remove this sensitive information. This allows the data to be passed on to data analysts in the future, such that meaningful questions can be asked and organization insights can be found.
 
 ## How does the anonymizer work?
-After a lot of work devising the best data anonymization pipeline, I came up with a clear and modular process. I have packaged my very own data anonymization pipeline as a Python Package called [anonymizePy](https://pypi.org/project/anonymizePy/). 
+After a lot of work devising the best data anonymization pipeline, I came up with a clear and modular process. I have packaged my  data anonymization toolkit as a Python Package called [anonymizePy](https://pypi.org/project/anonymizePy/), which is free and available to anyone. 
 
 This package can be installed just like any other Python package via pip. If you are curious to get a more detailed look into how the anonymizer works, you can view the complete set of methods [here](https://github.com/ausdfrost/anonymizePy/blob/main/anonymizePy/data_anonymization_toolkit.py).
 
