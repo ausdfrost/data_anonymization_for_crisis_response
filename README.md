@@ -29,3 +29,6 @@ Replicating my analysis involves running these two scripts:
 
 1. Preprocessing: The script I used to preprocess the CAHOOTS can be found here --> '[case narrative data cleaning](call_data_cleaning.py)'. This script must be run on CSV files that were downloaded from CAHOOTS via Microsoft SharePoint.
 2. Data anonymization pipeline: The script I used to deploy the methods from anonymizePy can be found here --> '[data_anonymization](data_anonymization.py)'. It's easy to adjust parameters to tailor the script to your liking. <ins>Note</ins> that you will need to redefine your paths with respect to your data.
+
+# Example data and output
+Example data can be found here --> '[call data](call_data.csv)'. Example result output can be found here --> '[anonymization metrics](anonymization_metrics.log)'
