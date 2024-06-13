@@ -1,4 +1,4 @@
-# CAHOOTS Crisis Response Data Anonymization
+# CAHOOTS Data Anonymization for Crisis Response 
 
 A project by Aussie Frost for the DSCI 410 Applied Data Science for Social Justice course led by Professor Rori Rohlfs.  
 
